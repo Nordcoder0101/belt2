@@ -1,0 +1,21 @@
+<h1>Squishy Tomatoes</h1>
+
+<div class='box'>
+  <h1>Submit a review for {{movieToShow.title}}</h1>
+  <ng-container *ngIf=errors>
+    <p *ngFor="let error of errors">{{error}}</p>
+  </ng-container>
+  <form (submit)="createReview()">
+    <h3>Reviewer Name <input type='text' name="movieData.reviewer" [(ngModel)]="movieData.reviewer"></h3>
+    <h3>Stars <select name="movie.stars" [(ngModel)]="movieData.stars">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select></h3>
+    <h3>Movie Review <textarea cols="60" rows="8" type='text' name="movieData.review" [(ngModel)]="movieData.review"></textarea></h3>
+    <input type="submit" value="Submit Review">
+  </form>
+</div>
+<button [routerLink]="['/']">Back</button>

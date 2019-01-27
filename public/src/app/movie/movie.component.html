@@ -1,0 +1,27 @@
+<h1>Squishy Tomatoes</h1>
+<button class="btn btn-danger" (click)="deleteMovie(movieToShow._id)">Delete this movie</button>
+
+<div class="box">
+  <h2>Reviews for {{movieToShow.title}}</h2>
+  <table>
+    
+    <thead>
+      
+        <tr>
+          <th>Reviewer</th>
+          <th>Stars</th>
+          <th>Reviews</th>
+        </tr>
+      
+    </thead>
+    <ng-container *ngFor="let review of movieToShow.reviews">
+      <tr>
+        <td>{{review.reviewer}}</td>
+        <td>{{review.stars}}</td>
+        <td>{{review.review}}</td>
+      </tr>
+    </ng-container>
+  </table>
+  
+</div>
+<button [routerLink]="['/']">Back</button>

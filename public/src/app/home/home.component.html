@@ -1,0 +1,21 @@
+<h1>Squishy Tomatoes</h1>
+<h2 class="movielist">Movie List</h2>
+<button class="btn btn-primary" [routerLink]="['new']">Add New Movie</button>
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Movie title</th>
+      <th>Available Actions</th>
+    </tr>
+    <ng-container *ngFor="let movie of allMovies">
+      <tr>
+        <td>{{movie.title}}</td>
+        <td> <button class="btn btn-primary" [routerLink]="movie._id">Read Reviews</button> <button class="btn btn-primary" [routerLink]="[movie._id, 'review']">Write Review</button>
+      </tr>
+    </ng-container>    
+  </thead>
+
+  
+</table>
