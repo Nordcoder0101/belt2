@@ -37,7 +37,6 @@ module.exports = {
   },
 
   createMovie: (data) => {
-    console.log(data)
     let review = new Review(data)
     let movie = new Movie(data)
     movie.reviews.push(review)

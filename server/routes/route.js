@@ -8,6 +8,6 @@ const controller = require("../controllers/controller")
       .delete('/deletemovie/:id', controller.deleteMovie)
       .put('/getmovieandupdate/:id', controller.getMovieByIdAndUpdate)
       .get('*', (req, res, next) => {
-        res.sendFile(path.resolve("../public/dist/public/index.html"))
+        res.sendFile(path.resolve("./public/dist/public/index.html"))
       });  
 }

@@ -1,21 +1,41 @@
-<h1>Squishy Tomatoes</h1>
+<div class='tomato-container'>
+  <img class="tomato" src="../../assets/images.jpeg">
+  <img class="tomato" src="../../assets/images.jpeg">
+  <img class="tomato" src="../../assets/images.jpeg">
+  <img class="tomato" src="../../assets/images.jpeg">
+</div>
+<div class='tomato-container-two'>
+  <img class="tomato" src="../../assets/images.jpeg">
+  <img class="tomato" src="../../assets/images.jpeg">
+  <img class="tomato" src="../../assets/images.jpeg">
+  <img class="tomato" src="../../assets/images.jpeg">
+</div>
+<h1 class="title">Squishy Tomatoes</h1>
 <h2 class="movielist">Movie List</h2>
-<button class="btn btn-primary" [routerLink]="['new']">Add New Movie</button>
 
-
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Movie title</th>
-      <th>Available Actions</th>
-    </tr>
-    <ng-container *ngFor="let movie of allMovies">
-      <tr>
-        <td>{{movie.title}}</td>
-        <td> <button class="btn btn-primary" [routerLink]="movie._id">Read Reviews</button> <button class="btn btn-primary" [routerLink]="[movie._id, 'review']">Write Review</button>
+<img class="film-reel" src="../../assets/FilmReel-512.png">
+<div class="border">
+  <table class="table table-bordered">
+    <thead class= "thead-dark">
+      <tr class="">
+        <th scope="col" style="text-decoration:underline;">Movie title</th>
+        <th class="actions" scope="col" style="text-decoration:underline;">Available Actions</th>
       </tr>
-    </ng-container>    
-  </thead>
-
+    </thead>
+    
+      <ng-container *ngFor="let movie of allMovies">
+        <tbody>
+          <tr scope="row">
+              <td>{{movie.title}}</td>
+              <td><button class=" read-review btn btn-primary" [routerLink]="movie._id">Read Reviews</button> 
+                <button class="btn btn-warning" [routerLink]="[movie._id, 'review']">Write Review</button>
+              </td>        
+          </tr>
+        </tbody>
+      </ng-container>    
+      
+  </table>
   
-</table>
+</div>
+<hr>
+<button class="btn btn-success" [routerLink]="['new']">Add New Movie</button>

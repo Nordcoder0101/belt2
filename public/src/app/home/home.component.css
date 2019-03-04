@@ -1,4 +1,55 @@
 .movielist{
-  display: inline-block;
+  /* display: inline-block; */
   margin-right: 60px;
+  margin: auto;
+  width: 50%;
+  text-decoration: underline;
+}
+.title{
+  text-align: center;
+  border: 1px black solid;
+  border-radius: 1px;
+}
+.header{
+  text-align: center;
+}
+
+.table{
+  width: 500px;
+  
+}
+.border{
+  border: 1px black solid;
+  margin: auto;
+  width: 50%;
+}
+
+.read-review{
+  margin: 0 15px 0 0px;
+}
+
+.actions{
+  text-align: center;
+}
+
+.film-reel{
+  opacity: .2;
+  position: absolute;
+  margin-left: 25%;
+}
+
+.tomato{
+  height: 45px;
+  z-index: -1;
+}
+
+.tomato-container{
+  position: absolute;
+  z-index: -1;
+}
+
+.tomato-container-two{
+  position: absolute;
+  z-index: -1;
+  right: 5%;
 }
